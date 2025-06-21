@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula de Responsividade </title>
+    <style>
+        body {
+            background-color: #e3e3a6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: #69370e;
+            padding: 15px;
+            color: #e9e2b8;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #e9e2b8;
+            padding: 12px;
+            background-color: #71380a;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .botao-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #69370e;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+        .botao-voltar {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #532e10;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+
+        .botao-link:hover {
+            background-color: #8a4b1a;
+            transform: translateY(-2px);
+        }
+
+        .tamanho-legenda {
+            display: block;
+            margin-top: 8px;
+            color: #69370e;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1, h2 {
+                padding: 10px;
+                font-size: 1.2em;
+            }
+            
+            .botao-link {
+                width: 160px;
+                padding: 10px 20px;
+            }
+              .botao-link {
+                width: 160px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bem vindo a Aula 06 de Responsividade!</h1>
+
+    <h2>Sinta-se à vontade para navegar pelos 3 tamanhos de resolução:</h2>
+
+    <div class="botoes-container">
+        <a href="/Aula 6/pequena.html" class="botao-link">Resolução Pequena</a>
+        <span class="tamanho-legenda">Tamanho: até 600px</span>
+        
+        <a href="/Aula 6/media.html" class="botao-link">Resolução Média</a>
+        <span class="tamanho-legenda">Tamanho: 601px - 1024px</span>
+        
+        <a href="/Aula 6/grande.html" class="botao-link">Resolução Grande</a>
+        <span class="tamanho-legenda">Tamanho: acima de 1024px</span>
+
+        <a href="/index.html" class="botao-voltar">Voltar para o Menu de Atividades </a>
+    </div>
+</body>
+</html>

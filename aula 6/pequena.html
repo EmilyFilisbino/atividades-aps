@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout para Tela Pequena</title>
+    <style>
+        /* RESET E ESTILOS BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #222;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+        }
+
+        h1::after {
+            content: " (até 420px)";
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        /* LAYOUT PRINCIPAL */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .content section {
+            flex: 1 1 100%;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section.c {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* ESTILOS DE IMAGEM */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* ESTILOS DE TEXTO */
+        h3 {
+            padding: 15px 15px 5px;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        p {
+            padding: 0 15px 15px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* MEDIA QUERIES PARA RESPONSIVIDADE */
+        @media (min-width: 421px) {
+            h1::after {
+                content: " (acima de 420px)";
+            }
+            
+            .content section {
+                flex: 1 1 calc(50% - 10px);
+            }
+            
+            section.c {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                margin-bottom: 20px;
+            }
+            
+            .content section {
+                flex: 1 1 calc(33.333% - 14px);
+            }
+            
+            section.c {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tela pequena</h1>
+
+    <div class="content">
+        <section class="a">
+            <img src="ron-mueck-1.JPG" alt="ron mueck, máscaras II, 2001">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatibus deleniti asperiores atque
+                laudantium dolorem, ad qui voluptate repellat velit, fuga quaerat ipsa dicta quam cupiditate labore corporis enim
+                tenetur.
+            </p>
+        </section>
+        <section class="b">
+            <img src="ron-mueck-2.JPG" alt="ron mueck, mulher com gravetos, 2009">
+            <h3>Libero iure reiciendis</h3>
+            <p>
+                Libero iure reiciendis, nam ullam deserunt sint fugit maxime, quasi officiis itaque, eos modi deleniti!
+                Atque et nobis libero, ratione, ut enim amet animi modi ducimus adipisci officiis neque quasi!
+            </p>
+        </section>
+    </div>
+
+    <section class="c">
+        <img src="ron-mueck-3.JPG" alt="ron mueck, casal sob um guarda-chuva, 2013">
+        <h3>Quidem quas reiciendis</h3>
+        <p>
+            Quidem quas reiciendis, doloremque molestias adipisci, laboriosam aliquid, perspiciatis ullam maiores
+            quia numquam velit reprehenderit, dolorem vel! Qui veniam adipisci earum numquam voluptate, modi velit porro officiis
+            laborum iusto itaque.
+        </p>
+    </section>
+</body>
+</html>
